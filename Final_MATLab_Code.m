@@ -11,8 +11,6 @@ p2 = -50;
 %Set the Settling Time
 Ts = 0.1;
 
-%Calculate the damping ratio for the chosen settling time
-DR = round(-log(OS/100)/sqrt(pi^2 + (log(OS/100)^2)), 3);
 %Calculate damping ratio for OS%
 DR = round(-log(OS/100)/sqrt(pi^2 + (log(OS/100)^2)), 3);
 
