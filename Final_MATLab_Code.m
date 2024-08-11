@@ -7,11 +7,17 @@ OS = 5;
 %OL poles from our tf
 p1 = -9.67;
 p2 = -50;
+
+%Set the Settling Time
+Ts = 0.1;
+
+%Calculate the damping ratio for the chosen settling time
+DR = round(-log(OS/100)/sqrt(pi^2 + (log(OS/100)^2)), 3);
 %Calculate damping ratio for OS%
 DR = round(-log(OS/100)/sqrt(pi^2 + (log(OS/100)^2)), 3);
 
 %Calculate the natural frequency from damping ratio and chosen settling time
-wn = 4/(.1*DR);
+wn = 4/(Ts*DR);
 
 %Calculate the desired real part of the dominant pole
 sd = -DR * wn;
