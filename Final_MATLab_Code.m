@@ -32,7 +32,7 @@ t2 = mod(atand(wd/(sd-p2)),180);
 a = wd/(mod(tand((t1+t2)-180),180))-sd; 
 
 %Choose the added zero from the integral of the PID controller
-b = 7.85;
+b =  7.85;
 
 %Set 's' to automatically for transfer functions
 s = tf('s');
