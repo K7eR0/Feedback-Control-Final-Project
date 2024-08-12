@@ -1,5 +1,4 @@
 clear all
-syms s
 
 %Set a variable for OS%
 OS = 5;
